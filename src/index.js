@@ -1,14 +1,5 @@
-import express from "express"   
-import employeesRoutes from './routes/employees.routes.js'
-import pongRoutes from './routes/index.routes.js'
+import app from "./app.js"
+import { PORT } from "./config"
 
-const app = express()
-
-app.use(express.json())
-
-app.use('/api',employeesRoutes)
-app.use('/api',pongRoutes)
-
-
-app.listen(3000)
-console.log("escucha desde el puerto 3000")
+app.listen(PORT)
+console.log("escucha desde el puerto", PORT)
