@@ -2,6 +2,10 @@ import { config } from "dotenv";
 
 config()
 
+// se crean constantes para exportar
+// se toman las variables proporcionadas del servidor si no toma las variables locales
+// LAS VARIABLES DE ENTORNO SE DEBE CONFIGURAR
+
 export const PORT = process.env.PORT || 3000 
 export const DB_USER = process.env.DB_USER || 'root'
 export const DB_PASSWORD = process.env.DB_PASSWORD || 'admi'
