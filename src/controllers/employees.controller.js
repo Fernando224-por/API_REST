@@ -5,7 +5,7 @@ import {pool} from '../db.js';
 
 // creamos una constante que obtenga todos los empleados
 // debe ser asincrona y retornara una respuesta
-export const getEmployees = async(res) => {
+export const getEmployees = async(req ,res) => {
     //intentamos la consulta para devolver la respuesta en un formato json
     try {
         const [rows] = await pool.query('SELECT * FROM employee')
