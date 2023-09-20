@@ -2,6 +2,7 @@
 import express from "express"   
 import cors from "cors";
 import employeesRoutes from './routes/employees.routes.js'
+import usersRoutes from "./routes/users.routes.js"
 
 //se instancia la Porpiedad express de EXPRESS
 const app = express()
@@ -24,6 +25,8 @@ app.use(cors({
 
 //se crean las rutas de la api para realizar las peticiones
 app.use('/api',employeesRoutes)
+
+app.use('/api',usersRoutes)
 
 //de no encontrar la ruta solicitada, regresa status 404 con un mensaje
 app.use((req,res, next) =>{
